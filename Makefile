@@ -1,0 +1,1 @@
+SRC = $(addsuffix .c, $(addprefix src/, $(SRC_DIR)))
