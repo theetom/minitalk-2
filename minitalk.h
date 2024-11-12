@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:30:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/11 18:18:55 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:57:54 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@
 
 typedef struct	s_data
 {
-	int		l;
-	int		l_b;
+	int		l;		//	length of string
+	int		l_b;	//	"length bit (or quantity of bits received)"
+	int		str_p;	//	string position
+	char	*str;	//	final string
+	int		s_b;	//	string bytes
 }			t_data;
 
 #endif
