@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:30:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/12 12:57:54 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:10:39 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_data
+typedef struct s_data
 {
 	int		l;		//	length of string
 	int		l_b;	//	"length bit (or quantity of bits received)"
