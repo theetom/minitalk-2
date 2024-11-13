@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:39:33 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/12 19:18:58 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/12 20:01:22 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static void handler(int signum, siginfo_t *info, void *nada)
+static void	handler(int signum, siginfo_t *info, void *nada)
 {
-	nada = 0;
-	info = 0;
+	(void)nada;
+	(void)info;
 	if (signum == SIGUSR2)
 	{
-		write(1, "MEssage received \n", 100);
+		write(1, "MEssage received \n", 19);
 		exit(0);
 	}
 }

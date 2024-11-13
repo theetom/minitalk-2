@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:29:52 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/12 19:14:13 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/12 20:01:56 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	find_char(int signum)
 
 void handler(int signum, siginfo_t *info, void *nada)
 {
-	nada = 0;
+	(void)nada;
 	if (data_s.l_b < 32)
 		find_length(signum);
 	if (data_s.l_b >= 33)
