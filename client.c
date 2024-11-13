@@ -6,21 +6,23 @@
 /*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:39:33 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/13 14:27:10 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:34:29 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-
+static size_t	g_sig_counter;
 
 static void	handler(int signum, siginfo_t *info, void *nada)
 {
 	(void)nada;
 	(void)info;
+	g_sig_counter++;
 	if (signum == SIGUSR2)
 	{
-		write(1, "MEssage received \n", 19);
+		ft_printf("Bits exchanged (sent/received): %d\n", g_sig_counter);
+		write(1, "Message received \n", 19);
 		exit(0);
 	}
 }
@@ -63,6 +65,7 @@ int	main(int argc, char **argv)
 	int					n;
 	struct sigaction	sa;
 
+	g_sig_counter = 0;
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_SIGINFO;
 	sa.sa_sigaction = handler;
