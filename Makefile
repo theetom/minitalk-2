@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+         #
+#    By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 14:43:22 by toferrei          #+#    #+#              #
-#    Updated: 2024/11/13 14:53:09 by toferrei         ###   ########.fr        #
+#    Updated: 2024/11/14 12:14:09 by toferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = $(addsuffix .c, $(addprefix src/, $(SRC_DIR)))
 
-LIBFT			=	Libft/
+LIBFT			=	libft/
 LIBFT_A			=	$(LIBFT)libft.a
 
 PRINTF			=	Ft_Printf/
