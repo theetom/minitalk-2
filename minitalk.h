@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:30:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/14 12:14:49 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:46:48 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef struct s_data
 	int		str_p;			//	string position
 	char	*str;			//	final string
 	int		s_b;			//	string bytes
-	int		bit_counter;	// as name indicates
 }			t_data;
 
 #endif

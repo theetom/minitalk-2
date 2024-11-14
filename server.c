@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:29:52 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/13 17:11:19 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:46:35 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,10 @@ static t_data	g_data_s;
 static void	exit_manager(int pid)
 {
 	ft_putstr_fd(g_data_s.str, 1);
-	write(1, "\n", 2);
-	ft_printf("Bits Received: %d\n", g_data_s.bit_counter);
 	g_data_s.l = 0;
 	g_data_s.l_b = 0;
 	g_data_s.str_p = 0;
 	g_data_s.s_b = 0;
-	g_data_s.bit_counter = 0;
 	free(g_data_s.str);
 	kill(pid, SIGUSR2);
 }
@@ -54,7 +51,6 @@ static void	find_char(int signum)
 void	handler(int signum, siginfo_t *info, void *nada)
 {
 	(void)nada;
-	g_data_s.bit_counter++;
 	if (g_data_s.l_b < 32)
 		find_length(signum);
 	if (g_data_s.l_b >= 33)
@@ -82,7 +78,6 @@ int	main(void)
 	g_data_s.l_b = 0;
 	g_data_s.str_p = 0;
 	g_data_s.s_b = 0;
-	g_data_s.bit_counter = 0;
 	ft_printf("getpid	%d\n", getpid());
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);

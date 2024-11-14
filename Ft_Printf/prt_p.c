@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prt_p.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 17:53:29 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/14 12:02:38 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:46:59 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ size_t	putnbr(size_t nb, char *base)
 
 	x = 0;
 	b = ft_strlen_pf(base);
-/* 	if (nb < 0)
-	{
-		x += write(1, "-", 1);
-		nb = -nb;
-	} */
 	if (nb > b - 1)
 		x += putnbr(nb / b, base);
 	x += write(1, &base[nb % b], 1);
