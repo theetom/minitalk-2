@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toferrei <toferrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:30:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/11/13 15:19:24 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:14:49 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 # define _DEFAULT_SOURCE
 
-# include "Libft/libft.h"
+# include "libft/libft.h"
 # include "Ft_Printf/ft_printf.h"
 # include <stdio.h>
 # include <signal.h>
